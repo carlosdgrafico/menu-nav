@@ -1,0 +1,174 @@
+body {
+   background-color: #ccc;
+   background-image: url(../img/te-01.jpg);
+   background-size: auto;
+   background-repeat: no-repeat;
+   background-position: center center;
+   font-family: 'Open Sans', sans-serif;
+   font-size: 16px;
+   font-weight: 400;
+   margin: 0;
+   padding: 0;
+}
+
+header{
+   padding: 1em 0;
+   margin-top: 2em;
+   position: relative;
+   width: 100%;
+}
+
+
+.nav{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.nav--menu{
+   background-color: #7BAB39;
+   display: flex;
+   justify-content: flex-end;
+   flex-grow: 2;
+   align-items: center;
+   height: 45px;
+   line-height: 45px;
+   list-style-type: none;
+   list-style: none;
+   margin: 1.7em 0 0 0;
+   padding: 0;
+   overflow: hidden;
+   position: relative;
+}
+
+.nav--menu__derecha{
+   justify-content: start;
+}
+
+
+
+/* Lineas segmentadas*/
+.nav--menu:after{
+   border-top: 1px dashed #fff;
+   border-bottom: 1px dashed #fff;
+   content: '';
+   display: inline-block;
+   height: 80%;
+   position: absolute;
+   pointer-events: none;
+   width: 100%;
+}
+/* FIN Lineas segmentadas*/
+
+
+
+.nav--menu--item{
+   margin: 0;
+   padding: 0;
+}
+
+.nav--menu--item .item--link{
+   background-color: #7BAB39;
+   color: #fff;
+   display: inline-block;
+   font-size: 14px;
+   height: 100%;
+   padding: .7em 1em;
+   text-decoration: none;
+   text-shadow: 1px 1px 1px rgba(0,93,43,.5);
+   text-transform: uppercase;
+   transition: all .3s;
+}
+
+.nav--menu--item .item--link:hover{
+   background-color:#106235;
+}
+
+
+.nav--menu--item .item--link:active,
+.nav--menu--item .item--link:hover,
+.nav--menu--item .item--link:focus {
+   outline: none;
+}
+
+
+/* Logotipo */
+.nav--logotipo{
+   transition: all .3s;
+   width: 200px;
+}
+
+.nav--logotipo img{
+   margin: 0 auto;
+   width: 100%;
+}
+/* FIN Logotipo */
+
+
+
+@media(max-width: 900px){
+
+   .nav--menu{
+      height: 38px;
+      line-height: 38px;
+   }
+
+   .nav--menu--item .item--link{
+      font-size: 12px;
+   }
+
+   .nav--logotipo{
+      width: 180px;
+   }
+}
+
+
+@media(max-width: 768px){
+
+   .nav{
+      display: inherit;
+      margin-top: 100px;
+      width: 100%;
+   }
+
+   .nav--menu{
+      display: inherit;
+      height: auto;
+      line-height: inherit;
+      margin:0;
+   }
+
+   .nav--menu:after{
+      border: none;
+   }
+
+   .nav--menu--item{
+      background-color: #7BAB39;
+      border-bottom: 1px dashed #fff;
+      text-align: center;
+      width: 100%;
+   }
+
+   .nav--menu__derecha .nav--menu--item:last-child{
+      border-bottom: none;
+   }
+
+   .nav--menu--item .item--link{
+      font-size: 14px;
+      padding: .7em 0;
+      text-decoration: none;
+      width: 100%;
+   }
+
+   .nav--logotipo{
+      display: inline-block;
+      margin: 0 auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 150px;
+      z-index: 10;
+   }
+
+}
